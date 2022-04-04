@@ -21,14 +21,6 @@ When all prompts are answered
 Password is either displayed in an alert or written to the page
 
 
-
-
-
-
-
-
-
-
 # Articles and Notes
 window.alert(message);
 - Link: https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
