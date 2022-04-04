@@ -84,27 +84,29 @@ console.log(confirmSpecial);
 
 
 // Get random index from array of options
-// var index = Math.floor(Math.random() * options.length);
+var index = Math.floor(Math.random() * passwordLength);
 // var computerChoice = options[index];
+console.log(index);
 
 
 
-// 
+// Password Variable
+var password = [];
+
+// Function for populating password
 function generatePassword(genLength, genLower, genUpper, genNumber, genSpecial) {
   // genLength = passwordLength;
-  // genLower = confirmLower;
-  // genUpper= confirmUpper;
-  // genNumber = confirmNumber;
-  // genSpecial = confirmSpecial;
-  var password = [];
+  genLower = confirmLower;
+  genUpper= confirmUpper;
+  genNumber = confirmNumber;
+  genSpecial = confirmSpecial;
   for (let i = 0; i < genLength; i++) {
-    password.push(genLower[i])
+    password.push(genSpecial[i])
     console.log(password)
   }
-  
 }
 
-// generatePassword(passwordLength, confirmLower, confirmUpper, confirmNumber, confirmSpecial);
+generatePassword(passwordLength, confirmLower, confirmUpper, confirmNumber, confirmSpecial);
 
 
 
@@ -132,6 +134,3 @@ function generatePassword(genLength, genLower, genUpper, genNumber, genSpecial) 
 
 // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
-
-
-
