@@ -16,7 +16,7 @@ Validation for Input
 - at least one character type should be selected
 
 When all prompts are answered
-- a password is generated that matches the selected criteri
+- a password is generated that matches the selected criteria
 
 Password is either displayed in an alert or written to the page
 
