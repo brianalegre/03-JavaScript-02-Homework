@@ -5,6 +5,21 @@
 
 
 
+# Requirements
+Password Length
+- at least 8 characters and no more than 128 characters
+
+Confirmation
+- lowercase, uppercase, numeric, and/or special characters
+
+Validation for Input
+- at least one character type should be selected
+
+When all prompts are answered
+- a password is generated that matches the selected criteri
+
+Password is either displayed in an alert or written to the page
+
 
 
 
