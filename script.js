@@ -15,6 +15,10 @@ console.log(special);
 // Ask user for password length
 var passwordLength = window.prompt("Enter desired password length, must be at least 8 characters long, and no more than 128 characters")
 
+// Convert passwordLength to Num
+var numLength = parseInt(passwordLength, 10);
+
+
 // Check valid password lenth
 if (passwordLength < 8 || passwordLength > 128) {
   window.alert("Enter valid password length.  Please start over.");
@@ -84,9 +88,16 @@ console.log(confirmSpecial);
 
 
 // Get random index from array of options
-var index = Math.floor(Math.random() * passwordLength);
-// var computerChoice = options[index];
-console.log(index);
+var r = Math.floor(Math.random() * lowerCase.length);
+var lowerCasePass = [];
+for (i = 0; i < numLength; i++) {
+  lowerCasePass.push(lowerCase[r]);
+}
+// Check lowerCasePass
+console.log("lowerCasePass is: " + lowerCasePass);
+
+// Check random index r
+console.log("var r = " + r);
 
 
 
@@ -114,7 +125,9 @@ generatePassword(passwordLength, confirmLower, confirmUpper, confirmNumber, conf
 
 
 
-
+// Checking variable type
+// console.log("passwordLength is a :" + typeof passwordLength);
+// console.log("numLength is a :" + typeof numLength);
 
 
 
