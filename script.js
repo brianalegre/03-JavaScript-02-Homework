@@ -20,12 +20,12 @@ var numLength = parseInt(passwordLength, 10);
 
 
 // Check valid password lenth
-if (passwordLength < 8 || passwordLength > 128) {
+if (numLength < 8 || numLength > 128) {
   window.alert("Enter valid password length.  Please start over.");
 }
 
 // Print Variable to console
-console.log(passwordLength);
+console.log("The password length is: " + numLength);
 
 // -------------------------------------------------------------------------------------
 // Ask user for confirmUpper
@@ -33,13 +33,13 @@ var confirmLower = window.confirm("Do you want lowercase characters?")
 
 // Check for lowerCase usage
 if (confirmLower) {
-  confirmLower = lowerCase;
+  var lowerCaseChar = lowerCase;
 } else {
-  confirmLower = null;
+  var lowerCaseChar = null;
 }
 
 // Print Variable to console
-console.log(confirmLower);
+console.log("lowerCaseChar set to: " +lowerCaseChar);
 
 // -------------------------------------------------------------------------------------
 // Ask user for confirmUpper
@@ -47,13 +47,13 @@ var confirmUpper = window.confirm("Do you want uppercase characters?")
 
 // Check for uppercase usage
 if (confirmUpper) {
-  confirmUpper = upperCase;
+  var upperCaseChar = upperCase;
 } else {
-  confirmUpper = null;
+  var upperCaseChar = null;
 }
 
 // Print Variable to console
-console.log(confirmLower);
+console.log("upperCaseChar set to: " +upperCaseChar);
 
 
 // -------------------------------------------------------------------------------------
@@ -62,13 +62,13 @@ var confirmNumber = window.confirm("Do you want numeric characters?")
 
 // Check for uppercase usage
 if (confirmNumber) {
-  confirmNumber = number;
+  var numberChar = number;
 } else {
-  confirmNumber = null;
+  var numberChar = null;
 }
 
 // Print Variable to console
-console.log(confirmNumber);
+console.log("numberChar set to: " + numberChar);
 
 
 // -------------------------------------------------------------------------------------
@@ -77,30 +77,62 @@ var confirmSpecial = window.confirm("Do you want special characters?")
 
 // Check for uppercase usage
 if (confirmSpecial) {
-  confirmSpecial = special;
+  var specialChar = special;
 } else {
-  confirmSpecial = null;
+  var specialChar = null;
 }
 
 // Print Variable to console
-console.log(confirmSpecial);
+console.log("specialChar set to: " + specialChar);
 
 
+// -------------------------------------------------------------------------------------
+// Generate password only using lowerCase
 
 // Get random index from array of options
 var r = Math.floor(Math.random() * lowerCase.length);
+
+// Empty variable to push() to
 var lowerCasePass = [];
+
+// For loop, selecting random index then push to lowerCasePass
 for (let i = 0; i < numLength; i++) {
-  lowerCasePass.push(lowerCase[r]);
+  lowerCasePass.push(lowerCaseChar[r]);
   // Reselects another random number
    r = Math.floor(Math.random() * lowerCase.length);
-  console.log("var r = " + r);
+  // Checking value of r
+  // console.log("var r = " + r);
 }
 // Check lowerCasePass
 console.log("lowerCasePass is: " + lowerCasePass);
 
-// Check random index r
+// Check value of r
 console.log("var r = " + r);
+
+
+// Concat two variables for password
+// var lowerUpperPass
+// for (let j = 0; j < numLength; j++) {
+//   if (confirmLower) || (confirmUpper) {
+
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -108,42 +140,39 @@ console.log("var r = " + r);
 var password = [];
 
 // Function for populating password
-function generatePassword(genLength, genLower, genUpper, genNumber, genSpecial) {
-  // genLength = passwordLength;
-  genLower = confirmLower;
-  genUpper= confirmUpper;
-  genNumber = confirmNumber;
-  genSpecial = confirmSpecial;
-  for (let i = 0; i < genLength; i++) {
-    password.push(genSpecial[i])
-    console.log(password)
-  }
-}
+// function generatePassword(genLength, genLower, genUpper, genNumber, genSpecial) {
+//   // genLength = passwordLength;
+//   genLower = confirmLower;
+//   genUpper= confirmUpper;
+//   genNumber = confirmNumber;
+//   genSpecial = confirmSpecial;
+//   for (let i = 0; i < genLength; i++) {
+//     password.push(genSpecial[i])
+//     console.log(password)
+//   }
+// }
 
-generatePassword(passwordLength, confirmLower, confirmUpper, confirmNumber, confirmSpecial);
-
-
+// generatePassword(passwordLength, confirmLower, confirmUpper, confirmNumber, confirmSpecial);
 
 
 
 
+// // Checking variable type
+// console.log("passwordLength is a :" + typeof passwordLength);
+// console.log("numLength is a :" + typeof numLength);
 
-// Checking variable type
-console.log("passwordLength is a :" + typeof passwordLength);
-console.log("numLength is a :" + typeof numLength);
 
+// // Assignment Code
+// var generateBtn = document.querySelector("#generate");
 
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+// // // Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-// // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+//   passwordText.value = password;
 
-  passwordText.value = password;
+// }
 
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
