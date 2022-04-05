@@ -90,8 +90,11 @@ console.log(confirmSpecial);
 // Get random index from array of options
 var r = Math.floor(Math.random() * lowerCase.length);
 var lowerCasePass = [];
-for (i = 0; i < numLength; i++) {
+for (let i = 0; i < numLength; i++) {
   lowerCasePass.push(lowerCase[r]);
+  // Reselects another random number
+   r = Math.floor(Math.random() * lowerCase.length);
+  console.log("var r = " + r);
 }
 // Check lowerCasePass
 console.log("lowerCasePass is: " + lowerCasePass);
@@ -126,24 +129,21 @@ generatePassword(passwordLength, confirmLower, confirmUpper, confirmNumber, conf
 
 
 // Checking variable type
-// console.log("passwordLength is a :" + typeof passwordLength);
-// console.log("numLength is a :" + typeof numLength);
-
-
-
+console.log("passwordLength is a :" + typeof passwordLength);
+console.log("numLength is a :" + typeof numLength);
 
 
 // Assignment Code
-// var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  passwordText.value = password;
 
-// }
+}
 
 // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
