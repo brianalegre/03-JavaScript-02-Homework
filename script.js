@@ -123,6 +123,7 @@ for (let j = 0; j < numLength; j++) {
 
 // Check value of lowerUpperPass
 console.log("lowerUpperPass is: " + lowerUpperPass);
+// lowerUpperPass is numLength x2 - need to fix
 
 
 // -------------------------------------------------------------------------------------
@@ -130,32 +131,53 @@ console.log("lowerUpperPass is: " + lowerUpperPass);
 
 // Random index from array of options
 // l for lowerCaseChar
-var l = Math.floor(Math.random() * lowerCase.length);     // length = 26
+// length = 26
+var l = Math.floor(Math.random() * lowerCase.length);     
 
 // l for lowerCaseChar
-var u = Math.floor(Math.random() * upperCase.length);     // length = 26
+// length = 26
+var u = Math.floor(Math.random() * upperCase.length);     
 
 // l for lowerCaseChar
-var n = Math.floor(Math.random() * number.length);        // length = 10
+// length = 10
+var n = Math.floor(Math.random() * number.length);        
 
 // l for lowerCaseChar
-var s = Math.floor(Math.random() * special.length);       // length = 30
-
+// length = 30
+var s = Math.floor(Math.random() * special.length);       
 
 
 // All characters for password
 var allCharPass = [];
 for (let j = 0; j < numLength; j++) {
   allCharPass.push(lowerCaseChar[l]);
+  var l = Math.floor(Math.random() * lowerCase.length); 
   allCharPass.push(upperCaseChar[u]);
+  var u = Math.floor(Math.random() * upperCase.length);
   allCharPass.push(numberChar[n]);
+  var n = Math.floor(Math.random() * number.length); 
   allCharPass.push(specialChar[s]);
+  var s = Math.floor(Math.random() * special.length);  
 
 }
 
 // Check value of lowerUpperPass
+console.log(allCharPass);
 console.log("allCharPass is: " + allCharPass);
+// allCharPass is numLength x4 - need to fix
 
+// Remove all commas in password
+console.log(allCharPass.join(''));
+console.log("No Commas, allCharPass is: " + allCharPass.join(''));
+
+
+
+// Use for later
+// Function for random val
+// function randVal(){
+//   var x = Math.floor(Math.random() * arguments.length);
+//   return arguments[x];
+// }
 
 
 
@@ -213,3 +235,14 @@ var password = [];
 
 // // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
+
+
+
+// Atleast one character type must be selected
+// if 
+//   (!confirmLower) &&
+//   (!confirmUpper) &&
+//   (!confirmNumber) &&
+//   (!confirmSpecial); {
+//   return "You need to pick at least one";
+// }
