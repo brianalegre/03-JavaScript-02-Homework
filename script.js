@@ -107,17 +107,54 @@ for (let i = 0; i < numLength; i++) {
 console.log("lowerCasePass is: " + lowerCasePass);
 
 // Check value of r
-console.log("var r = " + r);
+// console.log("var r = " + r);
 
 
-// Concat two variables for password
-// var lowerUpperPass
-// for (let j = 0; j < numLength; j++) {
-//   if (confirmLower) || (confirmUpper) {
+// -------------------------------------------------------------------------------------
+// Generate password only using lowerCase and upperCase
 
-//   }
-// }
+// Two variables for password
+var lowerUpperPass = [];
+for (let j = 0; j < numLength; j++) {
+  lowerUpperPass.push(lowerCaseChar[r]);
+  lowerUpperPass.push(upperCaseChar[r]);
+  r = Math.floor(Math.random() * lowerCase.length);
+}
 
+// Check value of lowerUpperPass
+console.log("lowerUpperPass is: " + lowerUpperPass);
+
+
+// -------------------------------------------------------------------------------------
+// Generate password using all characters
+
+// Random index from array of options
+// l for lowerCaseChar
+var l = Math.floor(Math.random() * lowerCase.length);     // length = 26
+
+// l for lowerCaseChar
+var u = Math.floor(Math.random() * upperCase.length);     // length = 26
+
+// l for lowerCaseChar
+var n = Math.floor(Math.random() * number.length);        // length = 10
+
+// l for lowerCaseChar
+var s = Math.floor(Math.random() * special.length);       // length = 30
+
+
+
+// All characters for password
+var allCharPass = [];
+for (let j = 0; j < numLength; j++) {
+  allCharPass.push(lowerCaseChar[l]);
+  allCharPass.push(upperCaseChar[u]);
+  allCharPass.push(numberChar[n]);
+  allCharPass.push(specialChar[s]);
+
+}
+
+// Check value of lowerUpperPass
+console.log("allCharPass is: " + allCharPass);
 
 
 
