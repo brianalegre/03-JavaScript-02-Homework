@@ -86,6 +86,16 @@ if (confirmSpecial) {
 console.log("specialChar set to: " + specialChar);
 
 
+// Atleast one character type must be selected
+if (confirmLower === false && confirmUpper === false && confirmNumber === false && confirmSpecial === false ) {
+  window.alert("You need to pick at least one")
+  console.log("Something went wrong, none were selected");
+  }
+
+
+
+
+
 // -------------------------------------------------------------------------------------
 // Generate password only using lowerCase
 
@@ -217,6 +227,8 @@ console.log("Generated Password is: " + genPass.join(''));
 
 
 
+
+
 // Password Variable
 var password = [];
 
@@ -260,11 +272,3 @@ var password = [];
 
 
 
-// Atleast one character type must be selected
-// if 
-//   (!confirmLower) &&
-//   (!confirmUpper) &&
-//   (!confirmNumber) &&
-//   (!confirmSpecial); {
-//   return "You need to pick at least one";
-// }
