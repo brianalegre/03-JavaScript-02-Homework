@@ -39,7 +39,7 @@ if (confirmLower) {
 }
 
 // Print Variable to console
-console.log("lowerCaseChar set to: " +lowerCaseChar);
+console.log("lowerCaseChar set to: " + lowerCaseChar);
 
 // -------------------------------------------------------------------------------------
 // Ask user for confirmUpper
@@ -147,18 +147,38 @@ var n = Math.floor(Math.random() * number.length);
 var s = Math.floor(Math.random() * special.length);       
 
 
+
+
+
 // All characters for password
 var allCharPass = [];
-for (let j = 0; j < numLength; j++) {
-  allCharPass.push(lowerCaseChar[l]);
-  var l = Math.floor(Math.random() * lowerCase.length); 
-  allCharPass.push(upperCaseChar[u]);
-  var u = Math.floor(Math.random() * upperCase.length);
-  allCharPass.push(numberChar[n]);
-  var n = Math.floor(Math.random() * number.length); 
-  allCharPass.push(specialChar[s]);
-  var s = Math.floor(Math.random() * special.length);  
 
+// Set Character Limit for the password based on user input
+// allCharPass.length = numLength;  // gets weird results
+
+
+// Long Version 
+// 
+// for (let j = 0; j < numLength; j++) {
+//   allCharPass.push(lowerCaseChar[l]);
+//     var l = Math.floor(Math.random() * lowerCase.length); 
+//   allCharPass.push(upperCaseChar[u]);
+//     var u = Math.floor(Math.random() * upperCase.length);
+//   allCharPass.push(numberChar[n]);
+//     var n = Math.floor(Math.random() * number.length); 
+//   allCharPass.push(specialChar[s]);
+//     var s = Math.floor(Math.random() * special.length);  
+// }
+
+
+// Short Version
+// 
+for (let k = 0; k < numLength; k++) {
+  allCharPass.push(lowerCaseChar[l],upperCaseChar[u], numberChar[n], specialChar[s])
+    var l = Math.floor(Math.random() * lowerCase.length); 
+    var u = Math.floor(Math.random() * upperCase.length);
+    var n = Math.floor(Math.random() * number.length); 
+    var s = Math.floor(Math.random() * special.length);  
 }
 
 // Check value of lowerUpperPass
@@ -171,13 +191,15 @@ console.log(allCharPass.join(''));
 console.log("No Commas, allCharPass is: " + allCharPass.join(''));
 
 
+//  Get random characters from allCharPass for genPass
+var genPass = []
 
-// Use for later
-// Function for random val
-// function randVal(){
-//   var x = Math.floor(Math.random() * arguments.length);
-//   return arguments[x];
-// }
+for (let g = 0; g < numLength; g++) {
+  genPass.push(allCharPass[g])
+}
+
+console.log(genPass);
+console.log("Generated Password is: " + genPass.join(''));
 
 
 
