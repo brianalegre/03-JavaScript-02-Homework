@@ -6,10 +6,10 @@ var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", 
 
 
 // Print Variables to console
-console.log(lowerCase);
-console.log(upperCase);
-console.log(number);
-console.log(special);
+// console.log(lowerCase);
+// console.log(upperCase);
+// console.log(number);
+// console.log(special);
 
 // -------------------------------------------------------------------------------------
 // Ask user for password length
@@ -25,7 +25,7 @@ if (numLength < 8 || numLength > 128) {
 }
 
 // Print Variable to console
-console.log("The password length is: " + numLength);
+// console.log("The password length is: " + numLength);
 
 // -------------------------------------------------------------------------------------
 // Ask user for confirmUpper
@@ -39,7 +39,7 @@ if (confirmLower) {
 }
 
 // Print Variable to console
-console.log("lowerCaseChar set to: " + lowerCaseChar);
+// console.log("lowerCaseChar set to: " + lowerCaseChar);
 
 // -------------------------------------------------------------------------------------
 // Ask user for confirmUpper
@@ -53,7 +53,7 @@ if (confirmUpper) {
 }
 
 // Print Variable to console
-console.log("upperCaseChar set to: " +upperCaseChar);
+// console.log("upperCaseChar set to: " +upperCaseChar);
 
 
 // -------------------------------------------------------------------------------------
@@ -68,7 +68,7 @@ if (confirmNumber) {
 }
 
 // Print Variable to console
-console.log("numberChar set to: " + numberChar);
+// console.log("numberChar set to: " + numberChar);
 
 
 // -------------------------------------------------------------------------------------
