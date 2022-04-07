@@ -3,7 +3,8 @@ var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "j", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "~", "`", ";", ":", "'", ",", ".", "/", "?", ">", "<", "|", "]", "[", "{", "}"];
-
+// Used for available characters based on user selection
+var setChars = [];
 
 // Print Variables to console
 // console.log(lowerCase);
