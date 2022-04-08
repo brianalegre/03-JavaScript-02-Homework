@@ -18,6 +18,7 @@ var numLength = parseInt(passwordLength, 10);
 // Check valid password lenth
 if (numLength < 8 || numLength > 128) {
   window.alert("Enter valid password length.  Please start over.");
+  return;
 }
 
 
@@ -46,6 +47,7 @@ var confirmSpecial = window.confirm("Do you want special characters?")
 if (confirmLower === false && confirmUpper === false && confirmNumber === false && confirmSpecial === false ) {
   window.alert("You need to pick at least one")
   console.log("Something went wrong, none were selected");
+  return;
   }
 
   // console.log(confirmLower);
