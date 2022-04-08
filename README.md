@@ -1,8 +1,16 @@
 # 03-JavaScript-02-Homework
 
+# Description
+Create a Random Password Generator
 
+# Site Preview
+<p align="center">
+    <img alt="Site Preview" src="./assets/images/SitePreview.png">
+</p>
 
-
+# Github Links
+- Repository: https://github.com/brianalegre/03-JavaScript-Homework
+- Deployed: https://brianalegre.github.io/03-JavaScript-Homework/
 
 
 # Requirements
