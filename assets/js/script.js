@@ -5,9 +5,7 @@ var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "~", "`", ";", ":", "'", ",", ".", "/", "?", ">", "<", "|", "]", "[", "{", "}"];
 
 
-
-
-
+// Function for generating the password
 function generatePassword() {
   // Ask user for password length
 var passwordLength = window.prompt("Enter desired password length, must be at least 8 characters long, and no more than 128 characters")
@@ -16,6 +14,9 @@ var passwordLength = window.prompt("Enter desired password length, must be at le
 // Check if passwordLength is a number
 if (isNaN(passwordLength)){
   window.alert("Entry was not a number.  Please start over");
+  return;
+} else if (!passwordLength) {
+  window.alert("No value entered.  Please start over");
   return;
 }
 
@@ -58,15 +59,7 @@ if (confirmLower === false && confirmUpper === false && confirmNumber === false 
   return;
   }
 
-  // console.log(confirmLower);
-  // console.log(confirmUpper);
-  // console.log(confirmNumber);
-  // console.log(confirmSpecial);
-  
-
-
-// function generatePassword(numLength, confirmLower, confirmUpper, confirmNumber, confirmUpper, confirmSpecial) {
-//   userSelection();
+// Open variable for inputting available characters for password
   var setChars = [];
   var password = [];
 
@@ -76,17 +69,6 @@ if (confirmLower === false && confirmUpper === false && confirmNumber === false 
   if (confirmUpper) setChars = setChars.concat(upperCase);
   if (confirmNumber) setChars = setChars.concat(number);
   if (confirmSpecial) setChars = setChars.concat(special)
-
-  // Print Variables to console
-// console.log(lowerCase);
-// console.log(upperCase);
-// console.log(number);
-// console.log(special);
-
-// console.log(confirmLower);
-// console.log(confirmUpper);
-// console.log(confirmNumber);
-// console.log(confirmSpecial);
 
 
   for (let i = 0; i < numLength; i++) {
@@ -102,6 +84,7 @@ if (confirmLower === false && confirmUpper === false && confirmNumber === false 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -113,94 +96,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
-
-
-
-
-// -------------------------------------------------------------------------------------
-// *************************************************************************************
-// 
-// 
-//                        UNUSED CODE SECTION
-// 
-// 
-// *************************************************************************************
-// -------------------------------------------------------------------------------------
-
-// Used for available characters based on user selection
-// var setChars = [];
-// // All characters for password
-// var allCharPass = [];
-
-// Print Variables to console
-// console.log(lowerCase);
-// console.log(upperCase);
-// console.log(number);
-// console.log(special);
-
-
-// -------------------------------------------------------------------------------------
-// Generate password only using lowerCase
-// Get random index from array of options
-// var r = Math.floor(Math.random() * lowerCase.length);
-
-// // Empty variable to push() to
-// var lowerCasePass = [];
-
-// // For loop, selecting random index then push to lowerCasePass
-// for (let i = 0; i < numLength; i++) {
-//   lowerCasePass.push(lowerCaseChar[r]);
-//   // Reselects another random number
-//    r = Math.floor(Math.random() * lowerCase.length);
-//   // Checking value of r
-//   // console.log("var r = " + r);
-// }
-// // Check lowerCasePass
-// console.log("lowerCasePass is: " + lowerCasePass);
-
-// // Check value of r
-// // console.log("var r = " + r);
-
-
-// // -------------------------------------------------------------------------------------
-// // Generate password only using lowerCase and upperCase
-
-// // Two variables for password
-// var lowerUpperPass = [];
-// for (let j = 0; j < numLength; j++) {
-//   lowerUpperPass.push(lowerCaseChar[r]);
-//   lowerUpperPass.push(upperCaseChar[r]);
-//   r = Math.floor(Math.random() * lowerCase.length);
-// }
-
-// // Check value of lowerUpperPass
-// console.log("lowerUpperPass is: " + lowerUpperPass);
-// // lowerUpperPass is numLength x2 - need to fix
-
-
-
-
-// Set Character Limit for the password based on user input
-// allCharPass.length = numLength;  // gets weird results
-
-
-// Long Version 
-// 
-// for (let j = 0; j < numLength; j++) {
-//   allCharPass.push(lowerCaseChar[l]);
-//     var l = Math.floor(Math.random() * lowerCase.length); 
-//   allCharPass.push(upperCaseChar[u]);
-//     var u = Math.floor(Math.random() * upperCase.length);
-//   allCharPass.push(numberChar[n]);
-//     var n = Math.floor(Math.random() * number.length); 
-//   allCharPass.push(specialChar[s]);
-//     var s = Math.floor(Math.random() * special.length);  
-// }
-
-
-// Checking variable type
-// console.log("passwordLength is a :" + typeof passwordLength);
-// console.log("numLength is a :" + typeof numLength);
